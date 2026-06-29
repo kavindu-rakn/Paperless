@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FiPlusCircle, FiFile, FiEdit, FiTrash2, FiUserCheck, FiSettings, FiRefreshCcw } from 'react-icons/fi';
+import { FiPlusCircle, FiEdit, FiTrash2, FiSettings, FiRefreshCcw } from 'react-icons/fi';
 
 export default function Dashboard() {
   const navigate = useNavigate();
@@ -11,7 +11,6 @@ export default function Dashboard() {
     { id: 'ownership-change', title: 'Megaline Ownership Change', description: 'Transfer ownership of an existing Megaline connection.', icon: <FiRefreshCcw size={32} />, active: true, route: '/ownership-change' },
     { id: 'location-change', title: 'Telephone Location Change', description: 'Request relocation of a telephone connection.', icon: <FiEdit size={32} />, active: true, route: '/location-change' },
     { id: 'termination', title: 'Termination of Services', description: 'Request termination of existing services.', icon: <FiTrash2 size={32} />, active: true, route: '/termination' },
-    { id: 'supplier-reg', title: 'Supplier Registration', description: 'Supplier registration checklist and application.', icon: <FiFile size={32} />, active: false },
   ];
 
   return (
@@ -19,13 +18,15 @@ export default function Dashboard() {
       <h1 style={{ marginBottom: '0.5rem' }}>Dashboard</h1>
       <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>Select an application form to digitize.</p>
       
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1.5rem' }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', justifyContent: 'center' }}>
         {forms.map(form => (
           <div 
             key={form.id} 
             className="card"
             style={{ 
-              padding: '1.5rem', 
+              padding: '1.5rem',
+              flex: '1 1 300px',
+              maxWidth: '400px',
               cursor: form.active ? 'pointer' : 'not-allowed',
               opacity: form.active ? 1 : 0.6,
               transition: 'transform 0.2s',
