@@ -209,25 +209,31 @@ h1, h2, h3, h4 {
   }
 
   .wizard-nav-wrapper {
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 1rem;
+    padding: 0 1rem; /* Provide space for the first and last step text to safely overhang */
     margin-bottom: 1rem;
     width: 100%;
+    box-sizing: border-box;
   }
 
   .wizard-steps-container {
     flex-direction: row !important;
     justify-content: space-between !important;
-    min-width: 500px; /* Ensure progress bar and steps span at least this much */
-    margin-bottom: 0 !important; /* Move margin to wrapper */
+    width: 100%;
+    margin-bottom: 0 !important; 
   }
 
   .wizard-step {
     flex-direction: column !important;
-    min-width: 80px; 
     text-align: center;
+    /* allow the text to wrap nicely but prevent them from touching */
+    flex: 1;
+    align-items: center;
+  }
+
+  .wizard-step span {
+    font-size: 0.75rem !important; /* Slightly smaller font for mobile to fit nicely */
+    line-height: 1.1;
+    margin-top: 0.25rem;
   }
 }
 
