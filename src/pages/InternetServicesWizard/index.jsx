@@ -25,8 +25,9 @@ export default function InternetServicesWizard() {
       <h2 style={{ marginBottom: '1.5rem' }}>{t('wizards.internetServices.title')}</h2>
       
       {/* Progress Bar */}
-      <div className="wizard-steps-container" style={{ display: "flex", justifyContent: "space-between", marginBottom: "2rem", position: "relative" }}>
-        <div style={{ position: 'absolute', top: '15px', left: 0, right: 0, height: '4px', backgroundColor: 'var(--border-color)', zIndex: 0 }} />
+      <div className="wizard-nav-wrapper">
+        <div className="wizard-steps-container" style={{ display: "flex", justifyContent: "space-between", marginBottom: "2rem", position: "relative" }}>
+        <div style={{ position: "absolute", top: "15px", left: 0, width: "100%", height: "4px", backgroundColor: "var(--border-color)", zIndex: 0 }} />
         <div className="wizard-progress-bar" style={{ position: "absolute", top: "15px", left: 0, height: "4px", backgroundColor: "var(--slt-green)", zIndex: 0, width: `${((currentStep - 1) / (totalSteps - 1)) * 100}%`, transition: "width 0.3s ease" }} />
         
         {[1, 2, 3].map(step => (
@@ -45,6 +46,7 @@ export default function InternetServicesWizard() {
             </span>
           </div>
         ))}
+      </div>
       </div>
 
       <form onSubmit={currentStep === totalSteps ? handleSubmit : (e) => { e.preventDefault(); nextStep(); }}>

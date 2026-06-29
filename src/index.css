@@ -208,26 +208,26 @@ h1, h2, h3, h4 {
     padding: 1rem !important;
   }
 
-  .wizard-nav {
-    flex-direction: column;
-    align-items: flex-start !important;
-    gap: 1rem;
-  }
-
-  .wizard-steps-container {
-    flex-direction: column;
-    align-items: flex-start !important;
-    gap: 1rem;
-  }
-
-  .wizard-step {
-    flex-direction: row !important;
-    align-items: center;
+  .wizard-nav-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
     width: 100%;
   }
 
-  .wizard-progress-bar {
-    display: none !important;
+  .wizard-steps-container {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    min-width: 500px; /* Ensure progress bar and steps span at least this much */
+    margin-bottom: 0 !important; /* Move margin to wrapper */
+  }
+
+  .wizard-step {
+    flex-direction: column !important;
+    min-width: 80px; 
+    text-align: center;
   }
 }
 
