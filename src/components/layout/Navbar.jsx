@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FiFileText, FiGlobe } from 'react-icons/fi';
+import { FiGlobe } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
+import sltLogo from '../../assets/sltlogoOnly.png';
 
 export default function Navbar() {
   const { t, i18n } = useTranslation();
@@ -9,7 +10,7 @@ export default function Navbar() {
   return (
     <nav style={{ backgroundColor: '#ffffff', borderBottom: '1px solid var(--border-color)', padding: '1rem 2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
       <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', color: 'var(--slt-blue)' }}>
-        <FiFileText size={24} color="var(--slt-green)" />
+        <img src={sltLogo} alt="SLTMobitel Logo" style={{ height: '32px', width: 'auto', objectFit: 'contain' }} />
         <span style={{ fontSize: '1.25rem', fontWeight: '700' }}>{t('nav.title')}</span>
       </Link>
       <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
