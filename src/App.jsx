@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
 import NewConnectionWizard from './pages/NewConnectionWizard';
 import InternetServicesWizard from './pages/InternetServicesWizard';
+import OwnershipChangeWizard from './pages/OwnershipChangeWizard';
 import Navbar from './components/layout/Navbar';
 import ErrorBoundary from './components/ErrorBoundary';
 
@@ -17,6 +18,7 @@ function App() {
               <Route path="/" element={<Dashboard />} />
               <Route path="/new-connection" element={<NewConnectionWizard />} />
               <Route path="/internet-services" element={<InternetServicesWizard />} />
+              <Route path="/ownership-change" element={<OwnershipChangeWizard />} />
             </Routes>
           </ErrorBoundary>
         </main>

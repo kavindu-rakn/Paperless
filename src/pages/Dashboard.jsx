@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FiPlusCircle, FiFile, FiEdit, FiTrash2, FiUserCheck, FiSettings } from 'react-icons/fi';
+import { FiPlusCircle, FiFile, FiEdit, FiTrash2, FiUserCheck, FiSettings, FiRefreshCcw } from 'react-icons/fi';
 
 export default function Dashboard() {
   const navigate = useNavigate();
@@ -8,7 +8,7 @@ export default function Dashboard() {
   const forms = [
     { id: 'new-connection', title: 'New Connection', description: 'Application for new voice, broadband, or PEO TV services.', icon: <FiPlusCircle size={32} />, active: true, route: '/new-connection' },
     { id: 'internet-services', title: 'Internet Services', description: 'Application for new or upgrade of internet services.', icon: <FiSettings size={32} />, active: true, route: '/internet-services' },
-    { id: 'ownership-change', title: 'Megaline Ownership Change', description: 'Transfer ownership of an existing Megaline connection.', icon: <FiUserCheck size={32} />, active: false },
+    { id: 'ownership-change', title: 'Megaline Ownership Change', description: 'Transfer ownership of an existing Megaline connection.', icon: <FiRefreshCcw size={32} />, active: true, route: '/ownership-change' },
     { id: 'location-change', title: 'Telephone Location Change', description: 'Request relocation of a telephone connection.', icon: <FiEdit size={32} />, active: false },
     { id: 'termination', title: 'Termination of Services', description: 'Request termination of existing services.', icon: <FiTrash2 size={32} />, active: false },
     { id: 'supplier-reg', title: 'Supplier Registration', description: 'Supplier registration checklist and application.', icon: <FiFile size={32} />, active: false },
