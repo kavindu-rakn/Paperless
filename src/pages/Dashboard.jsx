@@ -10,7 +10,7 @@ export default function Dashboard() {
     { id: 'internet-services', title: 'Internet Services', description: 'Application for new or upgrade of internet services.', icon: <FiSettings size={32} />, active: true, route: '/internet-services' },
     { id: 'ownership-change', title: 'Megaline Ownership Change', description: 'Transfer ownership of an existing Megaline connection.', icon: <FiRefreshCcw size={32} />, active: true, route: '/ownership-change' },
     { id: 'location-change', title: 'Telephone Location Change', description: 'Request relocation of a telephone connection.', icon: <FiEdit size={32} />, active: true, route: '/location-change' },
-    { id: 'termination', title: 'Termination of Services', description: 'Request termination of existing services.', icon: <FiTrash2 size={32} />, active: false },
+    { id: 'termination', title: 'Termination of Services', description: 'Request termination of existing services.', icon: <FiTrash2 size={32} />, active: true, route: '/termination' },
     { id: 'supplier-reg', title: 'Supplier Registration', description: 'Supplier registration checklist and application.', icon: <FiFile size={32} />, active: false },
   ];
 

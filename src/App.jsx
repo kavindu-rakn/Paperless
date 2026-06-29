@@ -5,6 +5,7 @@ import NewConnectionWizard from './pages/NewConnectionWizard';
 import InternetServicesWizard from './pages/InternetServicesWizard';
 import OwnershipChangeWizard from './pages/OwnershipChangeWizard';
 import LocationChangeWizard from './pages/LocationChangeWizard';
+import TerminationWizard from './pages/TerminationWizard';
 import Navbar from './components/layout/Navbar';
 import ErrorBoundary from './components/ErrorBoundary';
 
@@ -21,6 +22,7 @@ function App() {
               <Route path="/internet-services" element={<InternetServicesWizard />} />
               <Route path="/ownership-change" element={<OwnershipChangeWizard />} />
               <Route path="/location-change" element={<LocationChangeWizard />} />
+              <Route path="/termination" element={<TerminationWizard />} />
             </Routes>
           </ErrorBoundary>
         </main>
